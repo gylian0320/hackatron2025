@@ -6,18 +6,19 @@ Login
 
 {% block content %}
 <form method="POST">
-    <!-- Flash messages for errors or success -->
-    {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-    <div>
-        {% for category, message in messages %}
-        <div class="alert alert-{{ category }}">
-            {{ message }}
-        </div>
-        {% endfor %}
+    <!-- Flash Messages (Popup) -->
+    <div id="flash-container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash-popup {{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
     </div>
-    {% endif %}
-    {% endwith %}
+    
     <div class="login-container">
         <h2>University Login</h2>
         <form>
