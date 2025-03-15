@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        /* Container to position elements */
+        .map-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Style the image */
+        .map-image {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        /* Style for buttons */
+        .map-button {
+            position: absolute;
+            background-color: rgb(64, 64, 191);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Button 1 (Car Park button 1) */
+        #btn1 {
+            top: 33%;
+            left: 26%;
+            padding: 32px 19px;  
+            font-size: 10px;
+        }
+
+        /* Button 2 (Car Park button 2) */
+        #btn1 {
+            top: 33%;
+            left: 26%;
+            padding: 32px 19px;  
+            font-size: 10px;
+        }
+
+        /* Button 3 (Library) */
+        #btn3 {
+            top: 50%;
+            left: 50%;
+            padding: 10px 25px;   /* Smaller size for Library button */
+            font-size: 14px;       /* Smaller text size */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="map-container">
+        <img src="map.png" alt="Campus Map" class="map-image">
+
+        <!-- Buttons placed at specific positions -->
+        <button id="btn1" class="map-button" onclick="alert('You clicked on the Main Hall')">Car Park</button>
+        <button id="btn2" class="map-button" onclick="alert('You clicked on Parking')">Parking</button>
+        <button id="btn3" class="map-button" onclick="alert('You clicked on the Library')">Library</button>
+    </div>
+
+</body>
+</html>
