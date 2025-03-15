@@ -29,9 +29,11 @@
             <input type="password" class="input-field" placeholder="Password" required>
             <button type="submit" class="login-button">Login</button>
         </form>
-        <button class="secondary-button">Forgot Password?</button>
-        <button class="secondary-button">Sign Up Account</button>
-        <button class="secondary-button">Need Help?</button>
+            <button class="secondary-button">Forgot Password?</button>
+            <button class="secondary-button">
+                <a href="{{ url_for('auth.sign_up') }}" style="text-decoration: none; color: inherit;">Sign Up Account</a>
+            </button>
+            <button class="secondary-button">Need Help?</button>
     </div>
 </form>
 </body>
