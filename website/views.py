@@ -2,11 +2,11 @@ from flask import Blueprint, render_template, request, flash, redirect, url_for
 
 views = Blueprint("views",__name__)
 
+@views.route("/")
 @views.route("/home")
 def home():
-    return "Home"
+    return render_template("/home.html")
 
-@views.route("/")
 @views.route("/signup_page", methods=["GET", "POST"])
 def signup():
     if request.method == "POST":
@@ -28,3 +28,7 @@ def signup():
         return redirect(url_for("views.home"))
 
     return render_template("/signup.html")
+
+@views.route("/todo_list")
+def todo_list():
+    return render_template("/todo_list.html")
