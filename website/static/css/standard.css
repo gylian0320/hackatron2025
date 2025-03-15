@@ -1,0 +1,30 @@
+/* Updated priority.css */
+
+/* Priority color coding */
+.Low {
+    background-color: #d4edda; /* Green for low */
+    color: #155724;
+    padding: 3px 6px;
+    border-radius: 3px;
+  }
+    
+  .Medium {
+    background-color: #fff3cd; /* Yellow for medium */
+    color: #856404;
+    padding: 3px 6px;
+    border-radius: 3px;
+  }
+  
+  .Important {
+    background-color: #f9b23b; /* Orange for important */
+    color: #ffffff; /* Changed to white for better contrast */
+    padding: 3px 6px;
+    border-radius: 3px;
+  }
+  
+  .Urgent {
+    background-color: #f8d7da; /* Red for urgent */
+    color: #721c24;
+    padding: 3px 6px;
+    border-radius: 3px;
+  }
