@@ -9,3 +9,7 @@ def home():
 @views.route("/todo_list")
 def todo_list():
     return render_template("/todo_list.html")
+
+@views.route("/map")
+def map():
+    return render_template("/map.html")

@@ -1,31 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Map</title>
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+{% block content %}
     <style>
         body {
             text-align: center;
-        }
+            margin: 0;
+            padding: 0;
+                }
 
-        /* Container to position elements */
         .map-container {
             position: relative;
-            display: inline-block;
+            width: 100%; /* Ensures full width */
+            max-width: 1200px; /* Set a max width for better control */
+            margin: 0 auto; /* Centers the map */
         }
 
-        /* Style the image */
         .map-image {
-            width: 100%;
-            max-width: 900px;
+            width: 100%; /* Makes it responsive */
+            height: auto; /* Keeps aspect ratio */
+            display: block;
         }
-
         /* Style for buttons */
         .map-button {
             position: absolute;
-            background-color: rgb(64, 64, 191);
-            color: white;
+            background-color: transparent;
+            color: transparent;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -908,7 +907,7 @@
 <body>
 
     <div class="map-container">
-        <img src="map.png" alt="Campus Map" class="map-image">
+        <img src="{{ url_for('static', filename='images/map.png') }}" alt="Campus Map" class="map-image">
 
         <!-- Buttons placed at specific positions -->
         <button id="btn1" class="map-button" onclick="alert('You clicked on the Inov Car Park')">Inov Car Park</button>
@@ -1017,3 +1016,4 @@
 
 </body>
 </html>
+{% endblock %}
