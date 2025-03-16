@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Profile</title>
+
+
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -57,19 +56,16 @@
       color: #1a0dab;
     }
   </style>
-</head>
-<body>
   <div class="profile-container">
     <div class="profile-header">
       <!-- Replace 'profile.jpg' with the path to your profile image -->
       <img src="profile.jpg" alt="Profile Picture">
-      <h1>Zi You Lim</h1>
+      <h1>{{ name }}</h1>
       <p>Web Developer | Designer | Content Creator</p>
     </div>
     <div class="profile-details">
       <h2>About Me</h2>
-      <p>Hello! I'm Zi You Lim. I'm a senior software engineer, professional programmer. Contact my number (+61412 345 678)for any question.</p>
+      <p>Hello! I'm {{ name }}. I'm a senior software engineer, professional programmer. Contact my number {{ phone }} for any questions.</p>
     </div>
   </div>
-</body>
-</html>
+{% endblock %}
