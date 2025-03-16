@@ -1,7 +1,9 @@
-
-
 {% extends "base.html" %}
-{% block title %}{{ title }}{% endblock %}
+
+{% block title %}
+Profile Page
+{% endblock %}
+
 {% block content %}
   <style>
     body {
@@ -46,26 +48,38 @@
       margin-bottom: 10px;
       color: #333;
     }
-    .profile-social {
-      margin-top: 20px;
+    .edit-button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
       text-align: center;
+      cursor: pointer;
     }
-    .profile-social a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #1a0dab;
+    .edit-button:hover {
+      background-color: #45a049;
     }
   </style>
+
   <div class="profile-container">
     <div class="profile-header">
       <!-- Replace 'profile.jpg' with the path to your profile image -->
       <img src="profile.jpg" alt="Profile Picture">
-      <h1>{{ name }}</h1>
-      <p>Web Developer | Designer | Content Creator</p>
     </div>
+    
     <div class="profile-details">
-      <h2>About Me</h2>
-      <p>Hello! I'm {{ name }}. I'm a senior software engineer, professional programmer. Contact my number {{ phone }} for any questions.</p>
+      <h2>Personal Details</h2>
+      <p><strong>First Name:</strong> {{ first_name }}</p>
+      <p><strong>Last Name:</strong> {{ last_name }}</p>
+      <p><strong>Email:</strong> {{ email }}</p>
+      <p><strong>Birthday:</strong> {{ birthday }}</p>
+      <p><strong>Gender:</strong> {{ gender }}</p>
     </div>
+
+    <!-- Edit button to go to the update profile page -->
+    <a href="{{ url_for('views.update_profile') }}" class="edit-button">Edit Profile</a>
   </div>
 {% endblock %}
