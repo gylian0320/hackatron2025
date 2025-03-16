@@ -61,7 +61,7 @@ def sign_up():
         db.session.commit()
 
         flash("Signup successful! You can now log in.", "success")
-        return redirect(url_for("views.home"))
+        return redirect(url_for("views.map"))
 
     return render_template("signup.html")
 
