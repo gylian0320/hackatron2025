@@ -1,0 +1,1779 @@
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.map-container {
+  position: relative;
+  width: 100%; /* Ensures full width */
+  max-width: 1200px; /* Set a max width for better control */
+  margin: 0 auto; /* Centers the map */
+}
+
+.map-image {
+  width: 100%; /* Makes it responsive */
+  height: auto; /* Keeps aspect ratio */
+  display: block;
+}
+/* Style for buttons */
+.map-button {
+  position: absolute;
+  background-color: transparent;
+  color: transparent;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+
+/* Car Park button 1 */
+/* Car Park button 1 */
+#btn1 {
+  top: 33%;
+  left: 26%;
+  border-radius: 0px;
+  padding: 34px 21px;
+  font-size: 5px;
+}
+
+/* Car Park button 2 */
+#btn2 {
+  top: 34.5%;
+  left: 18.1%;
+  border-radius: 0px;
+  padding: 23.5px 6px;
+  font-size: 3px;
+}
+
+/* innovation walk 7 */
+#btn3 {
+  top: 42.2%;
+  left: 18.4%;
+  border-radius: 0px;
+  padding: 14px 6px;
+  font-size: 3px;
+}
+
+/* Button 4 (P W2 innov) */
+#btn4 {
+  top: 48.1%;
+  left: 18.1%;
+  border-radius: 0px;
+  padding: 10.5px 9px;
+  font-size: 2px;
+}
+
+/* Button 5 (RainFor 9) */
+#btn5 {
+  top: 42.2%;
+  left: 26%;
+  border-radius: 0px;
+  padding: 10px 30.5px;
+  font-size: 2px;
+}
+
+/*  Earth Science Garden */
+#btn6 {
+  top: 45%;
+  left: 24.3%;
+  border-radius: 10px;
+  padding: 3.5px 15.4px;
+  font-size: 2px;
+}
+
+/* Rain For 11 */
+#btn7 {
+  top: 45%;
+  left: 28.2%;
+  border-radius: 0px;
+  padding: 5.3px 5.2px;
+  font-size: 1px;
+}
+
+/* Green Chemical Future */
+#btn8 {
+  top: 48.2%;
+  left: 27.5%;
+  border-radius: 0px;
+  padding: 14.7px 14px;
+  font-size: 2px;
+}
+
+/* Green Chemical Future 2*/
+#btn9 {
+  top: 48.2%;
+  left: 24.4%;
+  border-radius: 0px;
+  padding: 10.4px 1.3px;
+  font-size: 0.2px;
+}
+
+/* Innov walk 10 */
+#btn10 {
+  top: 47.7%;
+  left: 22.5%;
+  border-radius: 0px;
+  padding: 10.4px 10px;
+  font-size: 0.2px;
+}
+
+/* New Horizons */
+#btn11 {
+  top: 30%;
+  left: 34.45%;
+  border-radius: 0px;
+  padding: 18px 13px;
+  font-size: 3px;
+}
+
+/* New Horizons */
+#btn12 {
+  top: 35.3%;
+  left: 33.5%;
+  border-radius: 0px;
+  padding: 20px 5px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+/* Hargrave-Andrew Library */
+#btn13 {
+  top: 45.08%;
+  left: 32.8%;
+  border-radius: 0px;
+  padding: 32px 5px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+/* Hargrave-Andrew Library */
+#btn14 {
+  top: 46.58%;
+  left: 34.8%;
+  rotate: -8deg;
+  border-radius: 0px;
+  padding: 6px 5px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+/* Alliance Lane 16 */
+#btn15 {
+  top: 43.88%;
+  left: 37%;
+  rotate: -8deg;
+  border-radius: 0px;
+  padding: 5px 16px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+/* Alliance Lane 18 */
+#btn16 {
+  top: 43.3%;
+  left: 41.2%;
+  rotate: -8deg;
+  border-radius: 0px;
+  padding: 5px 11px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+/* Alliance Lane 22 */
+#btn17 {
+  top: 42.3%;
+  left: 45.2%;
+  rotate: -8deg;
+  border-radius: 0px;
+  padding: 5px 11px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+
+/* Alliance Lane 15 */
+#btn18 {
+  top: 40.8%;
+  left: 35.9%;
+  rotate: -8deg;
+  border-radius: 0px;
+  padding: 5px 7px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+/* College Walk 17 */
+#btn19 {
+  top: 48.3%;
+  left: 37.3%;
+  rotate: -8deg;
+  border-radius: 0px;
+  padding: 5px 17px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+/* Kenneth Hunt Garden*/
+#btn20 {
+  top: 46.58%;
+  left: 37.19%;
+  rotate: 1deg;
+  border-radius: 0px;
+  padding: 8px 6px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+
+#btn21 {
+  top: 86%;
+  left: 66.3%;
+  border-radius: 0px;
+  padding: 40px 20px; /* Smaller size for Library button */
+  font-size: 4px; /* Smaller text size */
+}
+
+#btn22 {
+  top: 88%;
+  left: 59%;
+  border-radius: 0px;
+  padding: 25px 15.5px; /* Smaller size for Library button */
+  font-size: 4px; /* Smaller text size */
+}
+
+#btn23 {
+  top: 80%;
+  left: 59%;
+  border-radius: 0px;
+  padding: 22px 15px; /* Smaller size for Library button */
+  font-size: 4px; /* Smaller text size */
+}
+
+#btn24 {
+  top: 87.8%;
+  left: 51.8%;
+  border-radius: 0px;
+  padding: 17px 9px; /* Smaller size for Library button */
+  font-size: 4px; /* Smaller text size */
+}
+
+#btn25 {
+  top: 87.5%;
+  left: 45.5%;
+  border-radius: 0px;
+  padding: 18px 10px; /* Smaller size for Library button */
+  font-size: 4px; /* Smaller text size */
+}
+
+#btn26 {
+  top: 76%;
+  left: 45.5%;
+  border-radius: 32px;
+  padding: 15px 2px; /* Smaller size for Library button */
+  font-size: 1.8px; /* Smaller text size */
+}
+
+#btn27 {
+  top: 80%;
+  left: 44.5%;
+  rotate: 8deg;
+  border-radius: 0px;
+  padding: 19px 7px; /* Smaller size for Library button */
+  font-size: 2px; /* Smaller text size */
+}
+
+#btn28 {
+  top: 81.5%;
+  left: 40%;
+  border-radius: 0px;
+  padding: 32px 18px; /* Smaller size for Library button */
+  font-size: 4px; /* Smaller text size */
+}
+
+#btn29 {
+  top: 82%;
+  left: 49%;
+  rotate: 5deg;
+  border-radius: 0px;
+  padding: 3px 16px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+
+#btn30 {
+  top: 72%;
+  left: 48.5%;
+  rotate: 5deg;
+  border-radius: 0px;
+  padding: 15.5px 4px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+/* College Walk 19 */
+#btn31 {
+  top: 45.8%;
+  left: 39.3%;
+  rotate: -11deg;
+  border-radius: 0px;
+  padding: 7px 1px; /* Smaller size for Library button */
+  font-size: 2px; /* Smaller text size */
+}
+/* College Walk 21 */
+#btn32 {
+  top: 45.9%;
+  left: 40.8%;
+  rotate: -11deg;
+  border-radius: 0px;
+  padding: 8px 3px; /* Smaller size for Library button */
+  font-size: 2px; /* Smaller text size */
+}
+/* College Walk 23 */
+#btn33 {
+  top: 45.8%;
+  left: 42%;
+  rotate: -9deg;
+  border-radius: 0px;
+  padding: 8px 2px; /* Smaller size for Library button */
+  font-size: 2px; /* Smaller text size */
+}
+/* College Walk 23 */
+#btn34 {
+  top: 44.8%;
+  left: 46%;
+  rotate: -11deg;
+  border-radius: 0px;
+  padding: 9px 7px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+/* College Walk 23 */
+#btn35 {
+  top: 47.3%;
+  left: 43%;
+  rotate: -10deg;
+  border-radius: 0px;
+  padding: 3px 15px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+/* Allicance Lane 17 */
+#btn36 {
+  top: 37.5%;
+  left: 40%;
+  rotate: -10deg;
+  border-radius: 0px;
+  padding: 21.6px 19px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+/* Allicance Lane 17 */
+#btn37 {
+  top: 35.9%;
+  left: 43.2%;
+  border-radius: 0px;
+  rotate: -9deg;
+  padding: 8px 20px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+/* Allicance Lane 17 */
+#btn38 {
+  top: 39.6%;
+  left: 43.2%;
+  rotate: -9deg;
+  border-radius: 0px;
+  padding: 5px 6px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+/* Allicance Lane 21 */
+#btn39 {
+  top: 39.3%;
+  left: 45.2%;
+  rotate: -9deg;
+  border-radius: 0px;
+  padding: 5px 5px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+/* Woodside Building */
+#btn40 {
+  top: 40.8%;
+  left: 50.2%;
+  border-radius: 0px;
+  padding: 29px 8px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+/* Central Twelve C12 */
+#btn41 {
+  top: 40.8%;
+  left: 55.5%;
+  border-radius: 0px;
+  padding: 24px 12px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+/* Science Boulevard 13 */
+#btn42 {
+  top: 35.3%;
+  left: 54.4%;
+  border-radius: 0px;
+  padding: 5px 20px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+/* Science Boulevard 13 */
+#btn43 {
+  top: 33%;
+  left: 54%;
+  border-radius: 0px;
+  padding: 2px 10px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+/* Research Way 26*/
+#btn44 {
+  top: 31.8%;
+  left: 41.6%;
+  border-radius: 0px;
+  padding: 6px 18px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+/* Research Way 26*/
+#btn45 {
+  top: 31.1%;
+  left: 44.4%;
+  border-radius: 0px;
+  padding: 11px 3px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+/* Research Way 30*/
+#btn46 {
+  top: 31.2%;
+  left: 47%;
+  border-radius: 0px;
+  padding: 9px 9px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+/* Science Boulevard 13 */
+#btn47 {
+  top: 31.2%;
+  left: 50.5%;
+  border-radius: 0px;
+  padding: 7px 3px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+
+/* Science Boulevard 13 */
+#btn48 {
+  top: 30.6%;
+  left: 52.5%;
+  border-radius: 0px;
+  padding: 5px 5px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+/* Science Boulevard 13 */
+#btn49 {
+  top: 30.6%;
+  left: 54.5%;
+  border-radius: 0px;
+  padding: 5px 2px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+/* Science Boulevard 13 */
+#btn50 {
+  top: 30.5%;
+  left: 55.6%;
+  border-radius: 0px;
+  rotate: -45deg;
+  padding: 3px 3px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn51 {
+  top: 75%;
+  left: 48.5%;
+  rotate: 5deg;
+  border-radius: 0px;
+  padding: 5px 7px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn52 {
+  top: 78%;
+  left: 50%;
+  rotate: 5deg;
+  border-radius: 0px;
+  padding: 10px 4px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn53 {
+  top: 69%;
+  left: 53.5%;
+  border-radius: 0px;
+  rotate: 5deg;
+  padding: 10px 3px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn54 {
+  top: 65%;
+  left: 49.5%;
+  border-radius: 0px;
+  rotate: 9deg;
+  padding: 13px 9px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn55 {
+  top: 62.5%;
+  left: 46.8%;
+  border-radius: 30px;
+  padding: 10px 10px; /* Smaller size for Library button */
+  font-size: 3.5px; /* Smaller text size */
+}
+
+#btn56 {
+  top: 59%;
+  left: 48%;
+  border-radius: 0px;
+  padding: 8px 3px; /* Smaller size for Library button */
+  font-size: 4px; /* Smaller text size */
+}
+
+#btn57 {
+  top: 61.5%;
+  left: 49.5%;
+  border-radius: 0px;
+  padding: 4px 4px; /* Smaller size for Library button */
+  font-size: 2px; /* Smaller text size */
+}
+
+#btn58 {
+  top: 60.5%;
+  left: 51.4%;
+  border-radius: 0px;
+  padding: 6px 4px; /* Smaller size for Library button */
+  font-size: 2px; /* Smaller text size */
+}
+
+#btn59 {
+  top: 59%;
+  left: 51%;
+  border-radius: 0px;
+  padding: 5px 8px; /* Smaller size for Library button */
+  font-size: 2px; /* Smaller text size */
+}
+
+#btn60 {
+  top: 58%;
+  left: 55.3%;
+  border-radius: 1px;
+  padding: 4px 11.8px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn61 {
+  top: 54.5%;
+  left: 48%;
+  border-radius: 0px;
+  rotate: 85deg;
+  padding: 4px 8px; /* Smaller size for Library button */
+  font-size: 2px; /* Smaller text size */
+}
+
+#btn62 {
+  top: 54.5%;
+  left: 55.5%;
+  border-radius: 0px;
+  padding: 4px 9px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn63 {
+  top: 49.3%;
+  left: 53.5%;
+  border-radius: 0px;
+  padding: 4px 12px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn64 {
+  top: 75%;
+  left: 51.5%;
+  border-radius: 0px;
+  rotate: 7deg;
+  padding: 12px 5.5px; /* Smaller size for Library button */
+  font-size: 4px; /* Smaller text size */
+}
+
+#btn65 {
+  top: 73.8%;
+  left: 35.4%;
+  border-radius: 0px;
+  rotate: 6deg;
+  padding: 10px 5px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+
+#btn66 {
+  top: 70.5%;
+  left: 38.6%;
+  border-radius: 0px;
+  rotate: 7deg;
+  padding: 8px 27px; /* Smaller size for Library button */
+  font-size: 4px; /* Smaller text size */
+}
+
+#btn67 {
+  top: 63.1%;
+  left: 37%;
+  border-radius: 0px;
+  padding: 15.9px 8px; /* Smaller size for Library button */
+  font-size: 4px; /* Smaller text size */
+}
+
+#btn68 {
+  top: 58%;
+  left: 42.2%;
+  border-radius: 0px;
+  padding: 3px 10px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn69 {
+  top: 59.3%;
+  left: 34.5%;
+  border-radius: 0px;
+  padding: 5px 12px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+
+#btn70 {
+  top: 54%;
+  left: 41%;
+  border-radius: 0px;
+  padding: 8px 7px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+/* College walk 10 */
+#btn71 {
+  top: 51.95%;
+  left: 26.6%;
+  border-radius: 0px;
+  padding: 3.4px 25px;
+  font-size: 0.2px;
+}
+
+/* innov walk 12 */
+#btn72 {
+  top: 53.8%;
+  left: 23.07%;
+  border-radius: 0px;
+  padding: 8.23px 10.3px;
+  font-size: 0.2px;
+}
+
+/* innov walk 15 */
+#btn73 {
+  top: 55.9%;
+  left: 17.99%;
+  border-radius: 0px;
+  padding: 32px 11.2px;
+  font-size: 0.2px;
+}
+
+/* Rain For 15 */
+#btn74 {
+  top: 53.7%;
+  left: 26.85%;
+  border-radius: 0px;
+  padding: 8px 8.6px;
+  font-size: 0.2px;
+}
+
+/* Rain For 17 */
+#btn75 {
+  top: 57%;
+  left: 26.5%;
+  border-radius: 0px;
+  padding: 12.5px 23.8px;
+  font-size: 0.2px;
+}
+
+/* Rain For 23 */
+#btn76 {
+  top: 59.45%;
+  left: 25.5%;
+  border-radius: 0px;
+  padding: 3.6px 6px;
+  font-size: 0.2px;
+}
+
+/* Rain For 21 */
+#btn77 {
+  top: 59.45%;
+  left: 27.8%;
+  border-radius: 0px;
+  padding: 3.6px 7px;
+  font-size: 0.2px;
+}
+
+/* Inov walk 19 */
+#btn78 {
+  top: 62.3%;
+  left: 19.2%;
+  border-radius: 0px;
+  rotate: -6.4deg;
+  padding: 8px 19px;
+  font-size: 0.2px;
+}
+
+/* Inov walk 19 2.0 */
+#btn79 {
+  top: 64.7%;
+  left: 18.6%;
+  border-radius: 0px;
+  rotate: 85deg;
+  padding: 6px 13px;
+  font-size: 0.2px;
+}
+
+/* Inov walk 23 */
+#btn80 {
+  top: 66.4%;
+  left: 19.1%;
+  border-radius: 0px;
+  padding: 8px 20px;
+  font-size: 0.2px;
+}
+
+/* Inov  18 */
+#btn81 {
+  top: 62.4%;
+  left: 23.6%;
+  border-radius: 0px;
+  padding: 21px 5.9px;
+  font-size: 0.2px;
+}
+
+/* Rain For 25 */
+#btn82 {
+  top: 61.5%;
+  left: 26.5%;
+  border-radius: 0px;
+  padding: 5px 24px;
+  font-size: 0.2px;
+}
+
+/* Rain For 19 */
+#btn83 {
+  top: 57.3%;
+  left: 30.1%;
+  border-radius: 0px;
+  padding: 41.9px 3.9px;
+  font-size: 0.2px;
+}
+
+/* Chanc Walk 11 */
+#btn84 {
+  top: 64.25%;
+  left: 28.5%;
+  border-radius: 0px;
+  padding: 9px 7.6px;
+  font-size: 0.2px;
+}
+
+/* Rain For 27 */
+#btn85 {
+  top: 64.5%;
+  left: 31.05%;
+  border-radius: 0px;
+  padding: 8.5px 7.6px;
+  font-size: 0.2px;
+}
+
+/* Car park 5 */
+#btn86 {
+  top: 70.5%;
+  left: 17.89%;
+  border-radius: 0px;
+  padding: 14.9px 12.4px;
+  font-size: 0.2px;
+}
+
+/* Anc imp way 7 */
+#btn87 {
+  top: 74.5%;
+  left: 22.4%;
+  border-radius: 0px;
+  padding: 9px 21px;
+  font-size: 0.2px;
+}
+
+/* Inov walk 26 */
+#btn88 {
+  top: 70.1%;
+  left: 23.9%;
+  border-radius: 0px;
+  padding: 11.2px 9px;
+  font-size: 0.2px;
+}
+
+/* Chanc walk 10 */
+#btn89 {
+  top: 68.1%;
+  left: 27.1%;
+  border-radius: 0px;
+  padding: 7.4px 31.8px;
+  font-size: 0.2px;
+}
+
+/* Rain For 35 */
+#btn90 {
+  top: 69.9%;
+  left: 29.9%;
+  border-radius: 0px;
+  padding: 5px 14px;
+  font-size: 0.2px;
+}
+
+/* Rain For 37 */
+#btn91 {
+  top: 70.65%;
+  left: 27.3%;
+  border-radius: 0px;
+  padding: 10.2px 8px;
+  font-size: 0.2px;
+}
+
+/* Rain For 39 */
+#btn92 {
+  top: 72%;
+  left: 30.2%;
+  border-radius: 0px;
+  padding: 9px 5px;
+  font-size: 0.2px;
+}
+
+/* Anc Imp Way 9*/
+#btn93 {
+  top: 72.7%;
+  left: 28%;
+  border-radius: 0px;
+  padding: 4px 13px;
+  font-size: 0.2px;
+}
+
+/* Rain For 43*/
+#btn94 {
+  top: 74.1%;
+  left: 29.5%;
+  border-radius: 0px;
+  padding: 4.1px 18px;
+  font-size: 0.2px;
+}
+
+/* Rain For 43 2.0*/
+#btn95 {
+  top: 75.03%;
+  left: 30.3%;
+  rotate: 42deg;
+  border-radius: 0px;
+  padding: 5.8px 5.4px;
+  font-size: 0.2px;
+}
+
+/* Rain For 49 */
+#btn96 {
+  top: 88.9%;
+  left: 29.2%;
+  border-radius: 0px;
+  padding: 13.3px 28px;
+  font-size: 0.2px;
+}
+
+/* Anc Imp Way 14 */
+#btn97 {
+  top: 83%;
+  left: 29.6%;
+  border-radius: 0px;
+  rotate: 35deg;
+  padding: 8px 10.5px;
+  font-size: 0.2px;
+}
+
+/* Anc Imp Way 12 */
+#btn98 {
+  top: 79.3%;
+  left: 28.95%;
+  border-radius: 0px;
+  padding: 3.2px 9px;
+  font-size: 0.2px;
+}
+
+/* Anc Imp Way 12 */
+#btn99 {
+  top: 80%;
+  left: 28.6%;
+  border-radius: 0px;
+  padding: 8px 4px;
+  font-size: 0.2px;
+}
+
+/* Anc Imp Way 12 */
+#btn100 {
+  top: 80.8%;
+  left: 26.7%;
+  border-radius: 0px;
+  padding: 14.2px 3px;
+  font-size: 0.2px;
+}
+
+#btn101 {
+  top: 52%;
+  left: 36%;
+  border-radius: 0px;
+  padding: 3px 26px; /* Smaller size for Library button */
+  font-size: 2px; /* Smaller text size */
+}
+
+#btn102 {
+  top: 54.3%;
+  left: 36%;
+  border-radius: 0px;
+  padding: 8px 15px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn103 {
+  top: 54%;
+  left: 44.5%;
+  border-radius: 0px;
+  padding: 10px 5px; /* Smaller size for Library button */
+  font-size: 2px; /* Smaller text size */
+}
+
+#btn104 {
+  top: 52%;
+  left: 44.5%;
+  border-radius: 0px;
+  padding: 7px 5px; /* Smaller size for Library button */
+  font-size: 2px; /* Smaller text size */
+}
+
+#btn105 {
+  top: 71%;
+  left: 67.5%;
+  border-radius: 60px;
+  padding: 40px 28px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+
+#btn106 {
+  top: 58.5%;
+  left: 78.3%;
+  border-radius: 0px;
+  padding: 45px 13px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn107 {
+  top: 70%;
+  left: 59%;
+  rotate: 13deg;
+  border-radius: 0px;
+  padding: 30px 15.5px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn108 {
+  top: 58.8%;
+  left: 62%;
+  border-radius: 0px;
+  padding: 26px 3.8px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn109 {
+  top: 50.5%;
+  left: 62.5%;
+  border-radius: 0px;
+  padding: 23px 3px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn110 {
+  top: 45.3%;
+  left: 62%;
+  border-radius: 0px;
+  padding: 4.8px 9px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn111 {
+  top: 43.6%;
+  left: 60.5%;
+  rotate: 113.5deg;
+  border-radius: 0px;
+  padding: 6px 16.8px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn112 {
+  top: 54%;
+  left: 48%;
+  rotate: 143deg;
+  border-radius: 0px;
+  padding: 5px 16.8px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn113 {
+  top: 54.55%;
+  left: 54.8%;
+  rotate: 90deg;
+  border-radius: 0px;
+  padding: 4.9px 15.8px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn114 {
+  top: 60%;
+  left: 54.4%;
+  rotate: 104deg;
+  border-radius: 0.8px;
+  padding: 4.9px 12px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn115 {
+  top: 45.5%;
+  left: 68.5%;
+  rotate: 51deg;
+  border-radius: 0px;
+  padding: 3.8px 12px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn116 {
+  top: 47.3%;
+  left: 72.2%;
+  rotate: 20deg;
+  border-radius: 0px;
+  padding: 5.3px 22px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn117 {
+  top: 41.5%;
+  left: 70%;
+  rotate: 20deg;
+  border-radius: 0px;
+  padding: 4.5px 14.5px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn118 {
+  top: 45.3%;
+  left: 72.5%;
+  rotate: 50deg;
+  border-radius: 0px;
+  padding: 6px 20px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn119 {
+  top: 32.6%;
+  left: 76.3%;
+  border-radius: 3px;
+  padding: 4px 16px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn120 {
+  top: 56%;
+  left: 69.6%;
+  border-radius: 0px;
+  padding: 55px 31px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn141 {
+  top: 63%;
+  left: 41.5%;
+  border-radius: 0px;
+  rotate: 7deg;
+  padding: 24px 10px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn142 {
+  top: 25.5%;
+  left: 61.9%;
+  border-radius: 30px;
+  padding: 30px 25px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn143 {
+  top: 26.5%;
+  left: 65%;
+  border-radius: 25px;
+  padding: 25.5px 20px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn144 {
+  top: 28%;
+  left: 67%;
+  border-radius: 23px;
+  padding: 24px 15.2px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn145 {
+  top: 25%;
+  left: 60%;
+  border-radius: 23px;
+  padding: 24px 16.5px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn146 {
+  top: 86%;
+  left: 72%;
+  border-radius: 23px;
+  padding: 25px 10px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn147 {
+  top: 82.3%;
+  left: 74.8%;
+  border-radius: 0px;
+  padding: 4.5px 12px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn148 {
+  top: 85%;
+  left: 73.7%;
+  border-radius: 0px;
+  rotate: 90deg;
+  padding: 3.9px 14px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn149 {
+  top: 72%;
+  left: 38.3%;
+  border-radius: 0px;
+  rotate: 9deg;
+  padding: 10px 10px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn150 {
+  top: 80%;
+  left: 48%;
+  border-radius: 0px;
+  rotate: 8deg;
+  padding: 9px 9px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn151 {
+  top: 85.5%;
+  left: 35.3%;
+  border-radius: 0px;
+  padding: 45px 12px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn152 {
+  top: 51.5%;
+  left: 43%;
+  border-radius: 0px;
+  rotate: 7deg;
+  padding: 5px 18px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn153 {
+  top: 33.2%;
+  left: 64.4%;
+  border-radius: 0px;
+  rotate: 24deg;
+  padding: 8px 22px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn154 {
+  top: 33.7%;
+  left: 66.5%;
+  border-radius: 2px;
+  rotate: -29deg;
+  padding: 13px 22px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn162 {
+  top: 32.8%;
+  left: 65.5%;
+  border-radius: 7.5px;
+  rotate: -30deg;
+  padding: 26px 18px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn163 {
+  top: 31.6%;
+  left: 62.1%;
+  border-radius: 0px;
+  rotate: -20deg;
+  padding: 15px 18.4px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn164 {
+  top: 35%;
+  left: 64%;
+  border-radius: 0px;
+  rotate: -28deg;
+  padding: 19px 15px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn165 {
+  top: 36.5%;
+  left: 61.5%;
+  border-radius: 5.5px;
+  rotate: 0deg;
+  padding: 22px 15px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn105 {
+  top: 71%;
+  left: 67.5%;
+  border-radius: 60px;
+  padding: 40px 28px; /* Smaller size for Library button */
+  font-size: 5px; /* Smaller text size */
+}
+
+#btn106 {
+  top: 58.5%;
+  left: 78.3%;
+  border-radius: 0px;
+  padding: 45px 13px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn107 {
+  top: 70%;
+  left: 59%;
+  rotate: 13deg;
+  border-radius: 0px;
+  padding: 30px 15.5px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn108 {
+  top: 58.8%;
+  left: 62%;
+  border-radius: 0px;
+  padding: 26px 3.8px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn109 {
+  top: 50.5%;
+  left: 62.5%;
+  border-radius: 0px;
+  padding: 23px 3px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn110 {
+  top: 45.3%;
+  left: 62%;
+  border-radius: 0px;
+  padding: 4.8px 9px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn111 {
+  top: 43.6%;
+  left: 60.5%;
+  rotate: 113.5deg;
+  border-radius: 0px;
+  padding: 6px 16.8px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn112 {
+  top: 54%;
+  left: 48%;
+  rotate: 143deg;
+  border-radius: 0px;
+  padding: 5px 16.8px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn113 {
+  top: 54.55%;
+  left: 54.8%;
+  rotate: 90deg;
+  border-radius: 0px;
+  padding: 4.9px 15.8px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn114 {
+  top: 60%;
+  left: 54.4%;
+  rotate: 104deg;
+  border-radius: 0.8px;
+  padding: 4.9px 12px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn115 {
+  top: 45.5%;
+  left: 68.5%;
+  rotate: 51deg;
+  border-radius: 0px;
+  padding: 3.8px 12px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn116 {
+  top: 47.3%;
+  left: 72.2%;
+  rotate: 20deg;
+  border-radius: 0px;
+  padding: 5.3px 22px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn117 {
+  top: 41.5%;
+  left: 70%;
+  rotate: 20deg;
+  border-radius: 0px;
+  padding: 4.5px 14.5px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn118 {
+  top: 45.3%;
+  left: 72.5%;
+  rotate: 50deg;
+  border-radius: 0px;
+  padding: 6px 20px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn119 {
+  top: 32.6%;
+  left: 76.3%;
+  border-radius: 3px;
+  padding: 4px 16px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn120 {
+  top: 56%;
+  left: 69.6%;
+  border-radius: 0px;
+  padding: 55px 31px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn141 {
+  top: 63%;
+  left: 41.5%;
+  border-radius: 0px;
+  rotate: 7deg;
+  padding: 24px 10px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn142 {
+  top: 25.5%;
+  left: 61.9%;
+  border-radius: 30px;
+  padding: 30px 25px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn143 {
+  top: 26.5%;
+  left: 65%;
+  border-radius: 25px;
+  padding: 25.5px 20px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn144 {
+  top: 28%;
+  left: 67%;
+  border-radius: 23px;
+  padding: 24px 15.2px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn145 {
+  top: 25%;
+  left: 60%;
+  border-radius: 23px;
+  padding: 24px 16.5px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn146 {
+  top: 86%;
+  left: 72%;
+  border-radius: 23px;
+  padding: 25px 10px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn147 {
+  top: 82.3%;
+  left: 74.8%;
+  border-radius: 0px;
+  padding: 4.5px 12px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn148 {
+  top: 85%;
+  left: 73.7%;
+  border-radius: 0px;
+  rotate: 90deg;
+  padding: 3.9px 14px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn149 {
+  top: 72%;
+  left: 38.3%;
+  border-radius: 0px;
+  rotate: 9deg;
+  padding: 10px 10px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn150 {
+  top: 80%;
+  left: 48%;
+  border-radius: 0px;
+  rotate: 8deg;
+  padding: 9px 9px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn151 {
+  top: 85.5%;
+  left: 35.3%;
+  border-radius: 0px;
+  padding: 45px 12px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn152 {
+  top: 51.5%;
+  left: 43%;
+  border-radius: 0px;
+  rotate: 7deg;
+  padding: 5px 18px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn153 {
+  top: 33.2%;
+  left: 64.4%;
+  border-radius: 0px;
+  rotate: 24deg;
+  padding: 8px 22px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn154 {
+  top: 33.7%;
+  left: 66.5%;
+  border-radius: 2px;
+  rotate: -29deg;
+  padding: 13px 22px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn162 {
+  top: 32.8%;
+  left: 65.5%;
+  border-radius: 7.5px;
+  rotate: -30deg;
+  padding: 26px 18px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn163 {
+  top: 31.6%;
+  left: 62.1%;
+  border-radius: 0px;
+  rotate: -20deg;
+  padding: 15px 18.4px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn164 {
+  top: 35%;
+  left: 64%;
+  border-radius: 0px;
+  rotate: -28deg;
+  padding: 19px 15px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+#btn165 {
+  top: 36.5%;
+  left: 61.5%;
+  border-radius: 5.5px;
+  rotate: 0deg;
+  padding: 22px 15px; /* Smaller size for Library button */
+  font-size: 3px; /* Smaller text size */
+}
+
+/* BEDDOE AVE 60 */
+#btn121 {
+  top: 70.1%;
+  left: 14%;
+  border-radius: 0px;
+  rotate: 4deg;
+  padding: 6px 8px;
+  font-size: 0.2px;
+}
+
+/* BEDDOE AVE 62 */
+#btn122 {
+  top: 74.6%;
+  left: 13.5%;
+  border-radius: 0px;
+  rotate: 3deg;
+  padding: 16px 7.8px;
+  font-size: 0.2px;
+}
+
+/* Inov Walk 33 */
+#btn123 {
+  top: 82%;
+  left: 20.5%;
+  border-radius: 0px;
+  padding: 14.6px 27px;
+  font-size: 0.2px;
+}
+
+/* Inov Walk 39 */
+#btn124 {
+  top: 86%;
+  left: 21%;
+  border-radius: 0px;
+  padding: 10px 25px;
+  font-size: 0.2px;
+}
+
+/* Inov Walk 39 */
+#btn125 {
+  top: 80.4%;
+  left: 14.9%;
+  border-radius: 0px;
+  padding: 11.5px 14.2px;
+  font-size: 0.2px;
+}
+
+/* Inov Walk 39 */
+#btn125 {
+  top: 80.4%;
+  left: 14.9%;
+  border-radius: 0px;
+  padding: 11.5px 14.2px;
+  font-size: 0.2px;
+}
+
+/* RC6 */
+#btn126 {
+  top: 11.49%;
+  left: 68.7%;
+  border-radius: 0px;
+  padding: 8px 36px;
+  font-size: 0.2px;
+}
+
+/* College Walk 61 */
+#btn127 {
+  top: 17%;
+  left: 70.3%;
+  border-radius: 0px;
+  padding: 32px 10px;
+  font-size: 0.2px;
+}
+
+/* College Walk 63 */
+#btn128 {
+  top: 16.39%;
+  left: 66.8%;
+  border-radius: 0px;
+  padding: 25px 19px;
+  font-size: 0.2px;
+}
+
+/* RC2 */
+#btn129 {
+  top: 11.25%;
+  left: 76.3%;
+  border-radius: 0px;
+  padding: 6.3px 19px;
+  font-size: 0.2px;
+}
+
+/* RC1 */
+#btn130 {
+  top: 13.7%;
+  left: 79.7%;
+  border-radius: 0px;
+  padding: 11.8px 11.8px;
+  font-size: 0.2px;
+}
+
+/* RC3 */
+#btn131 {
+  top: 15.6%;
+  left: 73.49%;
+  border-radius: 0px;
+  padding: 16.8px 2.6px;
+  font-size: 0.2px;
+}
+
+/* RC4 */
+#btn132 {
+  top: 19.56%;
+  left: 74.8%;
+  border-radius: 0px;
+  padding: 5.9px 13px;
+  font-size: 0.2px;
+}
+
+/* College Walk 62 */
+#btn133 {
+  top: 18.3%;
+  left: 74.5%;
+  border-radius: 0px;
+  padding: 2.9px 11.6px;
+  font-size: 0.2px;
+}
+
+/* College Walk 62 2.0 */
+#btn134 {
+  top: 16.8%;
+  left: 74.2%;
+  border-radius: 0px;
+  padding: 11.6px 2.9px;
+  font-size: 0.2px;
+}
+
+/* College Walk 62 3.0 */
+#btn135 {
+  top: 15.2%;
+  left: 75%;
+  border-radius: 0px;
+  padding: 2.7px 10px;
+  font-size: 0.2px;
+}
+
+/* College Walk 60 */
+#btn136 {
+  top: 15.9%;
+  left: 77.5%;
+  border-radius: 0px;
+  padding: 7px 5px;
+  font-size: 0.2px;
+}
+
+/* College Walk 58 */
+#btn137 {
+  top: 17.7%;
+  left: 79.4%;
+  border-radius: 0px;
+  padding: 16px 9px;
+  font-size: 0.2px;
+}
+
+/* College Walk 58 2.0 */
+#btn138 {
+  top: 18.6%;
+  left: 77.8%;
+  border-radius: 0px;
+  padding: 9.5px 7px;
+  font-size: 0.2px;
+}
+
+/* College Walk 56 */
+#btn139 {
+  top: 22.1%;
+  left: 78.8%;
+  border-radius: 0px;
+  padding: 4px 14px;
+  font-size: 0.2px;
+}
+
+/* College Walk 56 2.0 */
+#btn140 {
+  top: 24.1%;
+  left: 76.6%;
+  border-radius: 0px;
+  padding: 2.2px 9.7px;
+  font-size: 0.2px;
+}
+
+/* College Walk 56 3.0 */
+#btn155 {
+  top: 24.1%;
+  left: 79.34%;
+  border-radius: 0px;
+  padding: 12px 1.3px;
+  font-size: 0.2px;
+}
+
+/* College Walk 56 4.0 */
+#btn156 {
+  top: 23.3%;
+  left: 75.695%;
+  border-radius: 0px;
+  padding: 7px 1.3px;
+  font-size: 0.2px;
+}
+
+/* College Walk 56 5.0 */
+#btn157 {
+  top: 25.39%;
+  left: 78.2%;
+  border-radius: 0px;
+  padding: 2.3px 8px;
+  font-size: 0.2px;
+}
+
+/* RC4 */
+#btn158 {
+  top: 25.25%;
+  left: 75.2%;
+  border-radius: 0px;
+  padding: 6px 16px;
+  font-size: 0.2px;
+}
+
+/* College Walk 54 */
+#btn159 {
+  top: 28.45%;
+  left: 80%;
+  rotate: -5deg;
+  border-radius: 0px;
+  padding: 4.3px 9.5px;
+  font-size: 0.2px;
+}
+
+/* College Walk 52 */
+#btn160 {
+  top: 29%;
+  left: 76.9%;
+  rotate: 20deg;
+  border-radius: 0px;
+  padding: 4.9px 6px;
+  font-size: 0.2px;
+}
+
+/* College Walk 52 */
+#btn161 {
+  top: 27.7%;
+  left: 75%;
+  rotate: -36deg;
+  border-radius: 0px;
+  padding: 5px 5px;
+  font-size: 0.2px;
+}
