@@ -1,15 +1,45 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for
+from flask_login import login_user, login_required, logout_user, current_user, LoginManager, UserMixin
+from . import db
+
+
+# Initialize Flask-Login
+login_manager = LoginManager()
+login_manager.login_view = "auth.login"
 
 auth = Blueprint("auth",__name__)
 
+class User(db.Model, UserMixin):
+        id = db.Column(db.Integer(), primary_key=True)
+        first_name = db.Column(db.String(), nullable=False)
+        last_name = db.Column(db.String(), nullable=False)
+        birthday = db.Column(db.String(), nullable=False)
+        gender = db.Column(db.String(), nullable=False)
+        email = db.Column(db.String(), nullable=False)
+        password = db.Column(db.String(), nullable=False)
+
 @auth.route("/")
-@auth.route('/login', methods=['GET', 'POST'])
+@auth.route("/login", methods=["GET", "POST"])
 def login():
-    if request.method == 'POST':
-        username = request.form.get("username")
+    if request.method == "POST":
+        email = request.form.get("email")
         password = request.form.get("password")
-    
-    return render_template("/login.html")
+
+        user = User.query.filter_by(email=email).first()
+
+        if user and user.password == password:
+            login_user(user)
+            flash("Login successful!", "success")
+            return redirect(url_for("views.home"))
+        else:
+            flash("Invalid email or password", "error")
+
+    return render_template("login.html")
+
+# Flask-Login user loader
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
 
 @auth.route("/sign-up", methods=["GET", "POST"])
 def sign_up():
@@ -22,17 +52,35 @@ def sign_up():
         password = request.form.get("password")
         confirm_password = request.form.get("confirm_password")
 
-        # Basic validation
         if password != confirm_password:
             flash("Passwords do not match!", "error")
             return redirect(url_for("auth.sign_up"))
 
-        # Here, you can store the data in a database
-        flash("Signup successful! You can now log in.", "success")
-        return redirect(url_for("views.home"))
+        existing_user = User.query.filter_by(email=email).first()
 
-    return render_template("/signup.html")
+        if existing_user:
+            flash("Email already registered!", "error")
+            return redirect(url_for("auth.sign_up"))
+
+        user = User(
+            first_name=first_name,
+            last_name=last_name,
+            birthday=birthday,
+            gender=gender,
+            email=email,
+            password=password
+        )
+        db.session.add(user)
+        db.session.commit()
+
+        flash("Signup successful! You can now log in.", "success")
+        return redirect(url_for("auth.login"))
+
+    return render_template("signup.html")
 
 @auth.route("/logout")
+@login_required
 def log_out():
+    logout_user()
+    flash("Logged out successfully.", "success")
     return redirect(url_for("/login.html"))

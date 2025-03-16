@@ -9,31 +9,30 @@
 </head>
 
 <body>
-<form method="POST">
-    <!-- Flash messages for errors or success -->
-    {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-    <div>
-        {% for category, message in messages %}
-        <div class="alert alert-{{ category }}">
-            {{ message }}
-        </div>
-        {% endfor %}
+    <!-- Flash Messages (Popup) -->
+    <div id="flash-container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash-popup {{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
     </div>
-    {% endif %}
-    {% endwith %}
+
     <div class="login-container">
         <h2>University Login</h2>
-        <form>
-            <input type="text" class="input-field" placeholder="User ID" required>
-            <input type="password" class="input-field" placeholder="Password" required>
+        <form action="{{ url_for('auth.login') }}" method="POST">
+            <input type="text" class="input-field" name="username" placeholder="User ID" required>
+            <input type="password" class="input-field" name="password" placeholder="Password" required>
             <button type="submit" class="login-button">Login</button>
         </form>
-            <button class="secondary-button">Forgot Password?</button>
-            <button class="secondary-button">
-                <a href="{{ url_for('auth.sign_up') }}" style="text-decoration: none; color: inherit;">Sign Up Account</a>
-            </button>
-            <button class="secondary-button">Need Help?</button>
+        <button class="secondary-button">Forgot Password?</button>
+        <button class="secondary-button">
+            <a href="{{ url_for('auth.sign_up') }}" style="text-decoration: none; color: inherit;">Sign Up Account</a>
+        </button>
+        <button class="secondary-button">Need Help?</button>
     </div>
-</form>
 </body>
