@@ -17,7 +17,7 @@ def login():
         if user and user.password == password:
             login_user(user)
             flash("Login successful!", "success")
-            return redirect(url_for("views.home"))
+            return redirect(url_for("views.map"))
         else:
             flash("Invalid email or password", "error")
 
