@@ -26,6 +26,20 @@ body {
   cursor: pointer;
   transform: translate(-50%, -50%);
 }
+/* Popup image styling */
+.popup {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  display: none;
+  z-index: 10;
+}
+
+.popup img {
+  display: block;
+  margin: auto;}
 
 /* Car Park button 1 */
 /* Car Park button 1 */
