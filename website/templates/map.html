@@ -30,6 +30,20 @@
             cursor: pointer;
             transform: translate(-50%, -50%);
         }
+        /* Popup image styling */
+        .popup {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            display: none;
+            z-index: 10;
+        }
+
+        .popup img {
+            display: block;
+            margin: auto; }
 
         /* Car Park button 1 */
         /* Car Park button 1 */
@@ -1805,48 +1819,48 @@
         <img src="{{ url_for('static', filename='images/map.png') }}" alt="Campus Map" class="map-image">
 
         <!-- Buttons placed at specific positions -->
-        <button id="btn1" class="map-button" onclick="alert('You clicked on the Inov Car Park')">Inov Car Park</button>
-        <button id="btn2" class="map-button" onclick="alert('You clicked on Inov Car Park 2')">Inov Car Park 2</button>
-        <button id="btn3" class="map-button" onclick="alert('You clicked on the Inov Walk 7')">Inov Walk 7</button>
-        <button id="btn4" class="map-button" onclick="alert('You clicked on the Parking W2 innov')">Parking W2 innov</button>
-        <button id="btn5" class="map-button" onclick="alert('You clicked on the Rain For 9')">Rain For 9</button>
-        <button id="btn6" class="map-button" onclick="alert('You clicked on the Earth Science Garden')">Earth Science Garden</button>
-        <button id="btn7" class="map-button" onclick="alert('You clicked on the Rain For 11')">Rain For 11</button>
-        <button id="btn8" class="map-button" onclick="alert('You clicked on the Green Chemical Future')">Green Chemical Future</button>
-        <button id="btn9" class="map-button" onclick="alert('You clicked on the Green Chemical Future 2')">Green Chemical Future 2</button>
-        <button id="btn10" class="map-button" onclick="alert('You clicked on the Innov Walk 10')">Innov Walk 10</button>
-        <button id="btn11" class="map-button" onclick="alert('You clicked on the New Horizons')">New Horizons</button>
-        <button id="btn12" class="map-button" onclick="alert('You clicked on the New Horizons')">New Horizons</button>
-        <button id="btn13" class="map-button" onclick="alert('You clicked on the HAL')">HAL</button>
-        <button id="btn14" class="map-button" onclick="alert('You clicked on the HAL')">HAL</button>
-        <button id="btn15" class="map-button" onclick="alert('You clicked on the AL16')">AL16</button>
-        <button id="btn16" class="map-button" onclick="alert('You clicked on the AL18')">AL18</button>
-        <button id="btn17" class="map-button" onclick="alert('You clicked on the AL22')">AL22</button>
-        <button id="btn18" class="map-button" onclick="alert('You clicked on the AL15')">AL15</button>
-        <button id="btn19" class="map-button" onclick="alert('You clicked on the CW17')">CW17</button>
-        <button id="btn20" class="map-button" onclick="alert('You clicked on the KHG')">KHG</button>
-        <button id="btn21" class="map-button" onclick="alert('You clicked on the SE5 Car Park')">SE5 Car Park</button>
-        <button id="btn22" class="map-button" onclick="alert('You clicked on the SE4 Car Park')">SE4 Car Park</button>
-        <button id="btn23" class="map-button" onclick="alert('You clicked on the SE1 Car Park')">SE1 Car Park</button>
-        <button id="btn24" class="map-button" onclick="alert('You clicked on the S1 Car Park')">S1 Car Park</button>
-        <button id="btn25" class="map-button" onclick="alert('You clicked on the S2 Car Park')">S2 Car Park</button>
-        <button id="btn26" class="map-button" onclick="alert('You clicked on the The Ian Potter Centre for Performing Arts')">The Ian Potter Centre for Performing Arts </button>
-        <button id="btn27" class="map-button" onclick="alert('You clicked on the The Ian Potter Centre for Performing Arts')"></button>
-        <button id="btn28" class="map-button" onclick="alert('You clicked on the Learning & Teaching Building')">LTB</button>
-        <button id="btn29" class="map-button" onclick="alert('You clicked on the Education Building')">Education</button>
-        <button id="btn30" class="map-button" onclick="alert('You clicked on the Sir Louis Matheson Library')">Matheson Library</button>
-        <button id="btn31" class="map-button" onclick="alert('You clicked on the CW19')">CW19</button>
-        <button id="btn32" class="map-button" onclick="alert('You clicked on the CW21')">CW21</button>
-        <button id="btn33" class="map-button" onclick="alert('You clicked on the CW22')">CW22</button>
-        <button id="btn34" class="map-button" onclick="alert('You clicked on the CW22')">CW22</button>
-        <button id="btn35" class="map-button" onclick="alert('You clicked on the CW22')">CW22</button>
-        <button id="btn36" class="map-button" onclick="alert('You clicked on the AL17')">AL17</button>
-        <button id="btn37" class="map-button" onclick="alert('You clicked on the AL17')">AL17</button>
-        <button id="btn38" class="map-button" onclick="alert('You clicked on the AL17')">AL17</button>
-        <button id="btn39" class="map-button" onclick="alert('You clicked on the AL21')">AL21</button>
-        <button id="btn40" class="map-button" onclick="alert('You clicked on the WB')">WB</button>
-        <button id="btn41" class="map-button" onclick="alert('You clicked on the CTC12')">CTC12</button>
-        <button id="btn42" class="map-button" onclick="alert('You clicked on the SB13')">SB13</button>
+        <button id="btn1" class="map-button" onclick="showImage('inovCarPark', this)">Inov Car Park</button>
+        <button id="btn2" class="map-button" onclick="showImage('inovCarPark', this)">Inov Car Park 2</button>
+        <button id="btn3" class="map-button" onclick="showImage('inovCarPark', this)">Inov Walk 7</button>
+        <button id="btn4" class="map-button" onclick="showImage('inovCarPark', this)">Parking W2 innov</button>
+        <button id="btn5" class="map-button" onclick="showImage('inovCarPark', this)">Rain For 9</button>
+        <button id="btn6" class="map-button" onclick="showImage('inovCarPark', this)">Earth Science Garden</button>
+        <button id="btn7" class="map-button" onclick="showImage('inovCarPark', this)">Rain For 11</button>
+        <button id="btn8" class="map-button" onclick="showImage('inovCarPark', this)">Green Chemical Future</button>
+        <button id="btn9" class="map-button" onclick="showImage('inovCarPark', this)">Green Chemical Future 2</button>
+        <button id="btn10" class="map-button" onclick="showImage('inovCarPark', this)">Innov Walk 10</button>
+        <button id="btn11" class="map-button" onclick="showImage('inovCarPark', this)">New Horizons</button>
+        <button id="btn12" class="map-button" onclick="showImage('inovCarPark', this)">New Horizons</button>
+        <button id="btn13" class="map-button" onclick="showImage('inovCarPark', this)">HAL</button>
+        <button id="btn14" class="map-button" onclick="showImage('inovCarPark', this)">HAL</button>
+        <button id="btn15" class="map-button" onclick="showImage('inovCarPark', this)">AL16</button>
+        <button id="btn16" class="map-button" onclick="showImage('inovCarPark', this)">AL18</button>
+        <button id="btn17" class="map-button" onclick="showImage('inovCarPark', this)">AL22</button>
+        <button id="btn18" class="map-button" onclick="showImage('inovCarPark', this)">AL15</button>
+        <button id="btn19" class="map-button" onclick="showImage('inovCarPark', this)">CW17</button>
+        <button id="btn20" class="map-button" onclick="showImage('inovCarPark', this)">KHG</button>
+        <button id="btn21" class="map-button" onclick="showImage('inovCarPark', this)">SE5 Car Park</button>
+        <button id="btn22" class="map-button" onclick="showImage('inovCarPark', this)">SE4 Car Park</button>
+        <button id="btn23" class="map-button" onclick="showImage('inovCarPark', this)">SE1 Car Park</button>
+        <button id="btn24" class="map-button" onclick="showImage('inovCarPark', this)">S1 Car Park</button>
+        <button id="btn25" class="map-button" onclick="showImage('inovCarPark', this)">S2 Car Park</button>
+        <button id="btn26" class="map-button" onclick="showImage('inovCarPark', this)">The Ian Potter Centre for Performing Arts </button>
+        <button id="btn27" class="map-button" onclick="showImage('inovCarPark', this)"></button>
+        <button id="btn28" class="map-button" onclick="showImage('inovCarPark', this)">LTB</button>
+        <button id="btn29" class="map-button" onclick="showImage('inovCarPark', this)">Education</button>
+        <button id="btn30" class="map-button" onclick="showImage('inovCarPark', this)">Matheson Library</button>
+        <button id="btn31" class="map-button" onclick="showImage('inovCarPark', this)">CW19</button>
+        <button id="btn32" class="map-button" onclick="showImage('inovCarPark', this)">CW21</button>
+        <button id="btn33" class="map-button" onclick="showImage('inovCarPark', this)">CW22</button>
+        <button id="btn34" class="map-button" onclick="showImage('inovCarPark', this)">CW22</button>
+        <button id="btn35" class="map-button" onclick="showImage('inovCarPark', this)">CW22</button>
+        <button id="btn36" class="map-button" onclick="showImage('inovCarPark', this)">AL17</button>
+        <button id="btn37" class="map-button" onclick="showImage('inovCarPark', this)">AL17</button>
+        <button id="btn38" class="map-button" onclick="showImage('inovCarPark', this)">AL17</button>
+        <button id="btn39" class="map-button" onclick="showImage('inovCarPark', this)">AL21</button>
+        <button id="btn40" class="map-button" onclick="showImage('inovCarPark', this)">WB</button>
+        <button id="btn41" class="map-button" onclick="showImage('inovCarPark', this)">CTC12</button>
+        <button id="btn42" class="map-button" onclick="showImage('inovCarPark', this)">SB13</button>
         <button id="btn43" class="map-button" onclick="alert('You clicked on the SB13')">SB13</button>
         <button id="btn44" class="map-button" onclick="alert('You clicked on the RW26')">RW26</button>
         <button id="btn45" class="map-button" onclick="alert('You clicked on the RW26')">RW26</button>
@@ -1890,92 +1904,72 @@
         <button id="btn83" class="map-button" onclick="alert('You clicked on the Rain For 19')">Rain For 19</button>
         <button id="btn84" class="map-button" onclick="alert('You clicked on the Chanc Walk 11')">Chanc Walk 11</button>
         <button id="btn85" class="map-button" onclick="alert('You clicked on the Rain For 27')">Rain For 27</button>
-        <button id="btn86" class="map-button" onclick="alert('You clicked on the Car park 5')">Car park 5</button>
-        <button id="btn87" class="map-button" onclick="alert('You clicked on the Anc Imp Way 7')">Anc Imp Way 7</button>
-        <button id="btn88" class="map-button" onclick="alert('You clicked on the Inov Walk 26')">Inov Walk 26</button>
-        <button id="btn89" class="map-button" onclick="alert('You clicked on the Chanc walk 10')">Chanc walk 10</button>
-        <button id="btn90" class="map-button" onclick="alert('You clicked on the Rain For 35')">Rain For 35</button>
-        <button id="btn91" class="map-button" onclick="alert('You clicked on the Rain For 37')">Rain For 37</button>
-        <button id="btn92" class="map-button" onclick="alert('You clicked on the Rain For 39')">Rain For 39</button>
-        <button id="btn93" class="map-button" onclick="alert('You clicked on the Anc Imp Way 9')">Anc Imp Way 9</button>
-        <button id="btn94" class="map-button" onclick="alert('You clicked on the Rain For 43')">Rain For 43</button>
-        <button id="btn95" class="map-button" onclick="alert('You clicked on the Rain For 43 2.0')">Rain For 43 2.0</button>
-        <button id="btn96" class="map-button" onclick="alert('You clicked on the Rain For 49')">Rain For 49</button>
-        <button id="btn97" class="map-button" onclick="alert('You clicked on the Anc Imp Way 14')">Anc Imp Way 14</button>
-        <button id="btn98" class="map-button" onclick="alert('You clicked on the Anc Imp Way 12')">Anc Imp Way 12</button>
-        <button id="btn99" class="map-button" onclick="alert('You clicked on the Anc Imp Way 12 2.0')">Anc Imp Way 12 2.0</button>
-        <button id="btn100" class="map-button" onclick="alert('You clicked on the Anc Imp Way 10')">Anc Imp Way 10</button>
-        <button id="btn101" class="map-button" onclick="alert('You clicked on the Science and Information Technology')">14</button>
-        <button id="btn102" class="map-button" onclick="alert('You clicked on the Science S1-S4, S9-S12, ST1-ST4, ST7 ')">16</button>
-        <button id="btn103" class="map-button" onclick="alert('You clicked on the Central One')">Central One</button>
-        <button id="btn104" class="map-button" onclick="alert('You clicked on the Central One')"></button>
+        <button id="btn86" class="map-button" onclick="showImage('inovCarPark', this)">Car park 5</button>
+        <button id="btn87" class="map-button" onclick="showImage('inovCarPark', this)">Anc Imp Way 7</button>
+        <button id="btn88" class="map-button" onclick="showImage('inovCarPark', this)">Inov Walk 26</button>
+        <button id="btn89" class="map-button" onclick="showImage('inovCarPark', this)">Chanc walk 10</button>
+        <button id="btn90" class="map-button" onclick="showImage('inovCarPark', this)">Rain For 35</button>
+        <button id="btn91" class="map-button" onclick="showImage('inovCarPark', this)">Rain For 37</button>
+        <button id="btn92" class="map-button" onclick="showImage('inovCarPark', this)">Rain For 39</button>
+        <button id="btn93" class="map-button" onclick="showImage('inovCarPark', this)">Anc Imp Way 9</button>
+        <button id="btn94" class="map-button" onclick="showImage('inovCarPark', this)">Rain For 43</button>
+        <button id="btn95" class="map-button" onclick="showImage('inovCarPark', this)">Rain For 43 2.0</button>
+        <button id="btn96" class="map-button" onclick="showImage('inovCarPark', this)">Rain For 49</button>
+        <button id="btn101" class="map-button" onclick="showImage('inovCarPark', this)">14</button>
+        <button id="btn102" class="map-button" onclick="showImage('inovCarPark', this)">16</button>
+        <button id="btn103" class="map-button" onclick="showImage('inovCarPark', this)">Central One</button>
+        <button id="btn104" class="map-button" onclick="showImage('inovCarPark', this)"></button>
 
 
-        <button id="btn121" class="map-button" onclick="alert('You clicked on the BEDDOE AVE 60')">BEDDOE AVE 60</button>
-        <button id="btn122" class="map-button" onclick="alert('You clicked on the BEDDOE AVE 62')">BEDDOE AVE 62</button>
-        <button id="btn123" class="map-button" onclick="alert('You clicked on the Inov Walk 33')">Inov Walk 33</button>
-        <button id="btn124" class="map-button" onclick="alert('You clicked on the Inov Walk 39')">Inov Walk 39</button>
-        <button id="btn125" class="map-button" onclick="alert('You clicked on the SW2')">Parking SW2</button>
-        <button id="btn126" class="map-button" onclick="alert('You clicked on the RC6')">RC6</button>
-        <button id="btn127" class="map-button" onclick="alert('You clicked on the College Walk 61')">College Walk 61</button>
-        <button id="btn128" class="map-button" onclick="alert('You clicked on the College Walk 63')">College Walk 63</button>
-        <button id="btn129" class="map-button" onclick="alert('You clicked on the RC2')">RC2</button>
-        <button id="btn130" class="map-button" onclick="alert('You clicked on the RC1')">RC1</button>
-        <button id="btn131" class="map-button" onclick="alert('You clicked on the RC3')">RC3</button>
-        <button id="btn132" class="map-button" onclick="alert('You clicked on the RC4')">RC4</button>
-        <button id="btn133" class="map-button" onclick="alert('You clicked on the College Walk 62')"> College Walk 62</button>
-        <button id="btn134" class="map-button" onclick="alert('You clicked on the College Walk 62 2.0')"> College Walk 62 2.0</button>
-        <button id="btn135" class="map-button" onclick="alert('You clicked on the College Walk 62 3.0')"> College Walk 62 3.0</button>
-        <button id="btn136" class="map-button" onclick="alert('You clicked on the College Walk 60')">College Walk 60</button>
-        <button id="btn137" class="map-button" onclick="alert('You clicked on the College Walk 58')">College Walk 58</button>
-        <button id="btn138" class="map-button" onclick="alert('You clicked on the College Walk 58 2.0')">College Walk 58 2.0</button>
-        <button id="btn139" class="map-button" onclick="alert('You clicked on the College Walk 56')">College Walk 56</button>
-        <button id="btn140" class="map-button" onclick="alert('You clicked on the College Walk 56 2.0')">College Walk 56 2.0</button>
+    
 
-        <button id="btn155" class="map-button" onclick="alert('You clicked on the College Walk 56 3.0')">College Walk 56 3.0</button>
-        <button id="btn156" class="map-button" onclick="alert('You clicked on the College Walk 56 4.0')">College Walk 56 4.0</button>
-        <button id="btn157" class="map-button" onclick="alert('You clicked on the College Walk 56 5.0')">College Walk 56 5.0</button>
-        <button id="btn158" class="map-button" onclick="alert('You clicked on the RC4')">RC4</button>
-        <button id="btn159" class="map-button" onclick="alert('You clicked on the College Walk 54')">College Walk 54</button>
-        <button id="btn160" class="map-button" onclick="alert('You clicked on the College Walk 52')">College Walk 52</button>
-        <button id="btn161" class="map-button" onclick="alert('You clicked on the College Walk 50')">College Walk 50</button>
-                <button id="btn105" class="map-button" onclick="alert('You clicked on the Frearson Oval')">Frearson Oval</button>
-        <button id="btn106" class="map-button" onclick="alert('You clicked on the Victorian Heart Hospital')">Victorian Heart Hospital</button>
-        <button id="btn107" class="map-button" onclick="alert('You clicked on the Monash Sport')">Monash Sport</button>
-        <button id="btn108" class="map-button" onclick="alert('You clicked on the Doug Ellis Swimming Pool')">Doug Ellis Swimming Pool</button>
-        <button id="btn109" class="map-button" onclick="alert('You clicked on the Northern Pavilion')">Northern Pavilion</button>
-        <button id="btn110" class="map-button" onclick="alert('You clicked on the Turner Hall')">Turner Hall</button>
-        <button id="btn111" class="map-button" onclick="alert('You clicked on the Turner Hall')"></button>
-        <button id="btn112" class="map-button" onclick="alert('You clicked on the Campbell Hall')"></button>
-        <button id="btn113" class="map-button" onclick="alert('You clicked on the Holman Hall')"></button>
-        <button id="btn114" class="map-button" onclick="alert('You clicked on the Logan Hall')"></button>
-        <button id="btn115" class="map-button" onclick="alert('You clicked on the Briggs Hall')">Briggs Hall</button>
-        <button id="btn116" class="map-button" onclick="alert('You clicked on the Briggs Hall')"></button>
-        <button id="btn117" class="map-button" onclick="alert('You clicked on the Jackomos Hall')">Jackomos Hall</button>
-        <button id="btn118" class="map-button" onclick="alert('You clicked on the Jackomos Hall')"></button>
-        <button id="btn119" class="map-button" onclick="alert('You clicked on the Jock Marshall Reserve')">Jock Marshall Reserve</button>
-        <button id="btn120" class="map-button" onclick="alert('You clicked on the Synthetic Sports Fields')">Synthetic Sports Fields</button>
-        <button id="btn141" class="map-button" onclick="alert('You clicked on the Monash Connect')">Monash Connect</button>
-        <button id="btn142" class="map-button" onclick="alert('You clicked on the Aboriginal Garden')"></button>
-        <button id="btn143" class="map-button" onclick="alert('You clicked on the Aboriginal Garden')"></button>
-        <button id="btn144" class="map-button" onclick="alert('You clicked on the Aboriginal Garden')"></button>
-        <button id="btn145" class="map-button" onclick="alert('You clicked on the Aboriginal Garden')"></button>
-        <button id="btn146" class="map-button" onclick="alert('You clicked on the Building 7')"></button>
-        <button id="btn147" class="map-button" onclick="alert('You clicked on the South East Flats')"></button>
-        <button id="btn148" class="map-button" onclick="alert('You clicked on the South East Flats')"></button>
-        <button id="btn149" class="map-button" onclick="alert('You clicked on the Menzies Building')"></button>
-        <button id="btn150" class="map-button" onclick="alert('You clicked on the Education Building')"></button>
-        <button id="btn151" class="map-button" onclick="alert('You clicked on the Monash Clayton Bus Loop')">Bus loop</button>
-        <button id="btn152" class="map-button" onclick="alert('You clicked on the Central One')"></button>
-        <button id="btn153" class="map-button" onclick="alert('You clicked on the Hockey Pavilion')"></button>
-        <button id="btn154" class="map-button" onclick="alert('You clicked on the Hockey Pavilion')"></button>
-        <button id="btn162" class="map-button" onclick="alert('You clicked on the Hockey Pavilion')"></button>
-        <button id="btn163" class="map-button" onclick="alert('You clicked on the Hockey Pavilion')"></button>
-        <button id="btn164" class="map-button" onclick="alert('You clicked on the Hockey Pavilion')"></button>
-        <button id="btn165" class="map-button" onclick="alert('You clicked on the Hockey Pavilion')"></button>
-
-
+    <div id="popup" class="popup" style="display: none;">
+        <img id="popup-image" src="" alt="Building Image" style="max-width: 300px; max-height: 300px;">
+        <button onclick="closePopup()">Close</button>
     </div>
+    </div>
+
+    <script>
+    function showImage(location, button) 
+    {
+    // Get the popup and image element
+    const popup = document.getElementById("popup");
+    const popupImage = document.getElementById("popup-image");
+
+    // Define image paths based on the location clicked
+    const images = {
+        inovCarPark: '5 Rainforest walk.png',
+        inovCarPark2: 'inovCarPark2-1.jpg',
+        inovWalk7: 'inovWalk7-1.jpg',
+        parkingW2: 'parkingW2-1.jpg',
+        rainFor9: 'rainFor9-1.jpg',
+        earthScienceGarden: 'earthScienceGarden1.jpg',
+        rainFor11: 'rainFor11-1.jpg',
+        greenChemicalFuture: 'greenChemicalFuture1.jpg',
+        greenChemicalFuture2: 'greenChemicalFuture2-1.jpg'
+    };
+
+    // Get the image file for the selected location
+    if (images[location]) {
+        // Set the image source for the popup
+        popupImage.src = "{{ url_for('static', filename='images/') }}" + images[location];
+
+        // Position the popup on top of the button
+        const rect = button.getBoundingClientRect();
+        popup.style.top = `${rect.top + window.scrollY - 150}px`; // Adjust '150px' to your needs
+        popup.style.left = `${rect.left + window.scrollX - 50}px`; // Adjust positioning as needed
+
+        // Show the popup
+        popup.style.display = "block";
+    }
+    }
+
+    function closePopup() 
+    {
+    // Hide the popup when the close button is clicked
+    document.getElementById("popup").style.display = "none";
+    }
+    </script>
 
 </body>
 </html>
