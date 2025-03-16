@@ -1,22 +1,9 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for
-from flask_login import login_user, login_required, logout_user, current_user, LoginManager, UserMixin
-from . import db
+from flask_login import login_user, login_required, logout_user, current_user
+from . import db, login_manager, User
 
 
-# Initialize Flask-Login
-login_manager = LoginManager()
-login_manager.login_view = "auth.login"
-
-auth = Blueprint("auth",__name__)
-
-class User(db.Model, UserMixin):
-        id = db.Column(db.Integer(), primary_key=True)
-        first_name = db.Column(db.String(), nullable=False)
-        last_name = db.Column(db.String(), nullable=False)
-        birthday = db.Column(db.String(), nullable=False)
-        gender = db.Column(db.String(), nullable=False)
-        email = db.Column(db.String(), nullable=False)
-        password = db.Column(db.String(), nullable=False)
+auth = Blueprint("auth", __name__)
 
 @auth.route("/")
 @auth.route("/login", methods=["GET", "POST"])
@@ -74,7 +61,7 @@ def sign_up():
         db.session.commit()
 
         flash("Signup successful! You can now log in.", "success")
-        return redirect(url_for("auth.login"))
+        return redirect(url_for("views.home"))
 
     return render_template("signup.html")
 
