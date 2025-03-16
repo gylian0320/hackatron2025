@@ -12,9 +12,11 @@ To-do List
             <button id="add-task-btn">Add Task</button>
         </div>
         <ul id="task-list">
-            <!-- Tasks will be added here -->
+            {% for task in tasks %}
+                <li>{{ task }}</li>
+            {% else %}
+                <li>No tasks found.</li>
+            {% endfor %}
         </ul>
     </div>
-</body>
-</html>
 {% endblock %}

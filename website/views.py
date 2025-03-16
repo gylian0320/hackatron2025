@@ -2,6 +2,7 @@ from flask import Blueprint, render_template, request, redirect, url_for
 from flask_login import current_user
 from . import db
 
+from .todo import get_current_user_tasks
 
 views = Blueprint("views", __name__)
 
@@ -11,7 +12,7 @@ def home():
 
 @views.route("/todo_list")
 def todo_list():
-    return render_template("/todo_list.html")
+    return render_template("/todo_list.html", tasks = get_current_user_tasks(current_user.id))
 
 @views.route("/map")
 def map():
